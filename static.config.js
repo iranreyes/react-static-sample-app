@@ -1,11 +1,10 @@
-import axios from 'axios'
+const posts = require('./data/posts');
 
 export default {
   getSiteData: () => ({
     title: 'React Static',
   }),
-  getRoutes: async () => {
-    const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+  getRoutes: () => {
     return [
       {
         path: '/',
